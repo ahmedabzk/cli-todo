@@ -58,6 +58,10 @@ impl Todo {
         }
     }
 
+    pub fn remove(&mut self, key:String){
+        self.map.remove(&key);
+    }
+
     pub fn list(self) -> Vec<String> {
         let mut result: Vec<String> = Vec::new();
         for (k, v) in self.map {

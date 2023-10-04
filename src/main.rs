@@ -36,6 +36,17 @@ fn main() {
                 Err(e) => println!("an error occurred: {}", e),
             },
         }
+    }else if action =="remove"{
+        if args.len() < 3{
+            println!("please provide an item to mark as complete");
+            return;
+        }
+        let item = &args[2];
+        todo.remove(item.to_string());
+        match todo.save(){
+            Ok(_) => println!("todo saved"),
+            Err(e) => println!("an error occurred: {}", e)
+        }
     } else if action == "list" {
         for (i, v) in todo.list().iter().enumerate() {
             println!("{}:{}", i + 1, v)
