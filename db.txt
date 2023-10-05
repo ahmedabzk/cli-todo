@@ -1,3 +1,4 @@
 do projects	true
+read a book	true
 code rust	true
 make pancakes	false

@@ -51,7 +51,7 @@ impl Todo {
         Ok(())
     }
 
-    pub fn complete(&mut self, key: &String) -> Option<()> {
+    pub fn complete(&mut self, key: &String) -> Option<()>{
         match self.map.get_mut(key) {
             Some(v) => Some(*v = false),
             None => None,
